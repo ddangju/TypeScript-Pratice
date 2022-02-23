@@ -90,7 +90,7 @@ function 나함수2(x: number): void {
 // 나함수3();
 
 function 나함수4(x?: number) {
-  console.log(x);
+  // console.log(x);
 }
 
 나함수4();
@@ -138,3 +138,56 @@ function 나함수6(x: number | string) {
 }
 
 나함수6(5);
+
+///
+///
+///
+/////타입이 너무 길다면? => type alias
+
+type Animal = string | number | undefined;
+type Test = string;
+let 동물: Animal & Test = "kim";
+
+type Animal2 = {
+  name: string;
+  age: number;
+};
+let 동물2: Animal2;
+
+///const object 수정 막기
+///읽기전용으로 바꿔주면 object의 객체값을 수정할 수 없다.
+type girlType = {
+  readonly region: string;
+};
+const 출생지역: girlType = { region: "seoul" };
+
+/////
+////
+////
+////
+/////type합치기
+type NameType = string;
+type AgeType = number;
+type Person = NameType | AgeType;
+
+///object를 extend하기
+
+type PositionX = { x: number };
+type PositionY = { y: number };
+
+type NewType = PositionX & PositionY;
+
+///type 포지션은 재정의가 불가능하다
+////
+////
+
+///변수보다 더 엄격한 타입지정 가능
+////literal types
+
+let 이름4: 123;
+
+let 나다: "연주" | "서른살인디";
+
+나다 = "서른살인디";
+
+///// 

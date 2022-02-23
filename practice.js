@@ -60,7 +60,7 @@ function 나함수2(x) {
 // }
 // 나함수3();
 function 나함수4(x) {
-    console.log(x);
+    // console.log(x);
 }
 나함수4();
 ///들어오는 인자값을 엄격하게 체크하는 방법 => Narrowing
@@ -96,3 +96,16 @@ function 나함수6(x) {
     arr[0] = x;
 }
 나함수6(5);
+var 동물 = "kim";
+var 동물2;
+var 출생지역 = { region: "seoul" };
+///type 포지션은 재정의가 불가능하다
+////
+////
+///변수보다 더 엄격한 타입지정 가능
+////literal types
+var 이름4;
+var 나다;
+나다 = "서른살인디";
+/////
+let;
